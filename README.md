@@ -1,3 +1,12 @@
+## Credit
+
+Forked from ByteMark Hosting's docker-webdav repo https://github.com/BytemarkHosting/docker-webdav
+
+Main changes...
+
+* Hardening of Apache TLS config
+* Changed base Apache image to fix SSL lib issue
+
 ## Supported tags
 
 * [`2.4`, `latest` (*2.4/Dockerfile*)](https://github.com/BytemarkHosting/docker-webdav/blob/master/2.4/Dockerfile)

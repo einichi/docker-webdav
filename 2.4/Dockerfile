@@ -5,7 +5,7 @@ FROM httpd:2.4
 # WORKDIR "$HTTPD_PREFIX"
 
 # Copy in our configuration files.
-COPY conf/ conf/
+COPY latest/conf/ conf/
 
 RUN set -ex; \
     # Create empty default DocumentRoot.
@@ -47,7 +47,8 @@ RUN set -ex; \
     ln -s ../conf-available/dav.conf "conf/conf-enabled"; \
     ln -s ../sites-available/default.conf "conf/sites-enabled"; \
     # Install openssl if we need to generate a self-signed certificate.
-    apk add --no-cache openssl
+    # apk add --no-cache openssl
+    apt update && apt install openssl -y
 
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 EXPOSE 80/tcp 443/tcp

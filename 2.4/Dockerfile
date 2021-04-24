@@ -5,7 +5,7 @@ FROM httpd:2.4
 # WORKDIR "$HTTPD_PREFIX"
 
 # Copy in our configuration files.
-COPY latest/conf/ conf/
+COPY conf/ conf/
 
 RUN set -ex; \
     # Create empty default DocumentRoot.

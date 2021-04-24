@@ -14,6 +14,8 @@ App is currently not included in plugins/apps section of Unraid. To use, select 
 
 Other settings do not differ from the 'ApacheWebDAV' app.
 
+If you'd like to see this included in Unraid's community applications, please feel free to contact me.
+
 ## Supported tags
 
 * [`2.4`, `latest` (*2.4/Dockerfile*)](https://github.com/BytemarkHosting/docker-webdav/blob/master/2.4/Dockerfile)

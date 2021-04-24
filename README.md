@@ -4,8 +4,15 @@ Forked from ByteMark Hosting's docker-webdav repo https://github.com/BytemarkHos
 
 Main changes...
 
-* Hardening of Apache TLS config
+* Hardening of Apache TLS config (TLS 1.2+ only, high strength ciphers as of 2021)
 * Changed base Apache image to fix SSL lib issue
+* Changed behavior on webdav data mount to prevent share from getting chowned with webserver user account
+
+## How to use
+
+App is currently not included in plugins/apps section of Unraid. To use, select the 'ApacheWebDAV' app from Community Apps and edit the 'Share' section 'Container Path' from '/var/lib/dav' to '/var/lib/dav/data'.
+
+Other settings do not differ from the 'ApacheWebDAV' app.
 
 ## Supported tags
 
